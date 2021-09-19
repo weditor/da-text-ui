@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "tk-text"
+version = "0.1.0"
+description = ""
+authors = ["aochujie"]
+
+[[tool.poetry.source]]
+name = "tuna"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pysimplegui = "^4.47.0"
+opencc = "1.1.1"
+pypinyin = "^0.42.0"
+
+[tool.poetry.dev-dependencies]
+pyinstaller = "^4.5.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
