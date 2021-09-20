@@ -11,3 +11,4 @@ pyinstaller main.spec -w --noconfirm
 1. 自定义复杂操作组合
 2. 悬浮窗,快捷键?
 3. 自动复制
+4. 插件式更新处理函数

@@ -6,3 +6,4 @@ __pycache__/
 poetry.lock
 build/
 dist/
+resources/config/custom.json
