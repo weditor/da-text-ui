@@ -16,6 +16,10 @@ def open_help_window():
 
 如果使用过程中遇到问题或者有改进意见，请联系 aochujie 。
 欢迎邮件或vanish轰炸。
+
+待完善:
+1. 支持快捷键
+2. 后台运行
     """
     help_wd = sg.Window("关于", layout=[[sg.Text(text)]], keep_on_top=True, modal=True, icon="resources/images/txt_icon.ico")
     event, value = help_wd.read(close=True)

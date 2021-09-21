@@ -94,7 +94,7 @@ class MainWindow:
             sg.Button("替换", disabled=True, size=btn_size, key="restructure"),
         ]
         custom_btns = [
-            sg.Button(btn.name, size=btn_size, key=f"custom-{idx}", tooltip=btn.description) 
+            sg.Button(btn.name, size=btn_size, key=f"custom-{idx}", tooltip=f"{btn.name}\n{btn.description}") 
             for idx, btn in enumerate(configure.config.buttons)
             if btn.visible and btn.enable
         ]
@@ -107,7 +107,8 @@ class MainWindow:
             [sg.Column(left_layout, expand_x=True, justification="left"), sg.VerticalSeparator(), sg.Column(right_layout, expand_y=True, justification="right")],
             [sg.Column(custom_btns_layout, expand_x=True)],
         ]
-        window = sg.Window('文本处理程序', layout, resizable=True, icon="resources/images/txt_icon.ico")
+        window = sg.Window('文本处理程序', layout, resizable=True, icon="resources/images/txt_icon.ico", finalize=True)
+        window.bind
         return window
 
     def process_text(self, func: Callable[[str], str]):
